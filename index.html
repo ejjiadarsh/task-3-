@@ -1,0 +1,92 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "f258d505-46c7-4f28-b8bf-0cbe45ed8701",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "✅ index.html created in templates folder\n"
+     ]
+    }
+   ],
+   "source": [
+    "html_code = \"\"\"\n",
+    "<!DOCTYPE html>\n",
+    "<html>\n",
+    "<head>\n",
+    "    <title>Diabetes Prediction App</title>\n",
+    "</head>\n",
+    "<body>\n",
+    "    <h2>Diabetes Prediction</h2>\n",
+    "    <form action=\"/predict\" method=\"post\">\n",
+    "        <label>Pregnancies:</label><br>\n",
+    "        <input type=\"number\" step=\"any\" name=\"Pregnancies\"><br>\n",
+    "        <label>Glucose:</label><br>\n",
+    "        <input type=\"number\" step=\"any\" name=\"Glucose\"><br>\n",
+    "        <label>Blood Pressure:</label><br>\n",
+    "        <input type=\"number\" step=\"any\" name=\"BloodPressure\"><br>\n",
+    "        <label>Skin Thickness:</label><br>\n",
+    "        <input type=\"number\" step=\"any\" name=\"SkinThickness\"><br>\n",
+    "        <label>Insulin:</label><br>\n",
+    "        <input type=\"number\" step=\"any\" name=\"Insulin\"><br>\n",
+    "        <label>BMI:</label><br>\n",
+    "        <input type=\"number\" step=\"any\" name=\"BMI\"><br>\n",
+    "        <label>Diabetes Pedigree Function:</label><br>\n",
+    "        <input type=\"number\" step=\"any\" name=\"DiabetesPedigreeFunction\"><br>\n",
+    "        <label>Age:</label><br>\n",
+    "        <input type=\"number\" step=\"any\" name=\"Age\"><br><br>\n",
+    "        <input type=\"submit\" value=\"Predict\">\n",
+    "    </form>\n",
+    "\n",
+    "    <h3>{{ prediction_text }}</h3>\n",
+    "</body>\n",
+    "</html>\n",
+    "\"\"\"\n",
+    "\n",
+    "# Save to templates/index.html\n",
+    "import os\n",
+    "\n",
+    "os.makedirs(\"templates\", exist_ok=True)  # create templates folder if not exist\n",
+    "\n",
+    "with open(\"templates/index.html\", \"w\") as file:\n",
+    "    file.write(html_code)\n",
+    "\n",
+    "print(\"✅ index.html created in templates folder\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "819d6356-b493-401a-a5eb-0fdeb6956006",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
